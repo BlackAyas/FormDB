@@ -10,11 +10,10 @@ plantilla::aplicar();
 ?>
 
 <div class="container">
-
+<br><br>
 <h3>Agregar Persona</h3>
+<br>
 <form method="post" action="">
-  <div class="row">
-    <div class="col-md-6">
 
   <?= asgInput('cedula', 'Cedula', ['placeholder'=>'Digite su Cedula'])?>
   <?= asgInput('nombre', 'Nombre', ['placeholder'=>'Digite su Nombre'])?>
@@ -22,16 +21,17 @@ plantilla::aplicar();
   <?= asgTipo('tipificacion', 'Tipo de Sangre')?>
   <?= asgRadio('sexo',"Sexo") ?>
   <?= asgTextArea('comentario', 'Comentario') ?>
-</div>
-</div>
-  <input type="checkbox" class="form-check-label" value="Acepto enviar esta informacion" required> Acepto enviar esta informacion
-    <br>
-    <div class="text-center">
-    <button type="submit"class="btn btn-primary" >
-      <i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
-    <button onclick="return confirm('¿Esta seguro?');" class="btn btn-danger" type="reset" >
-      <i class="fa fa-trash" aria-hidden="true"></i> Borrar</button>
-    <br>
-  </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label"></label>
+      <div class="col-sm-5">
+        <input type="checkbox" class="form-check-label" value="Acepto enviar esta informacion" required> <b> Acepto enviar esta informacion</b>
+          <br>
+          <br>
+        <button type="submit"class="btn btn-primary" >
+          <i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
+        <button onclick="return confirm('¿Esta seguro?');" class="btn btn-danger" type="reset" >
+          <i class="fa fa-trash" aria-hidden="true"></i> Limpiar</button>
+          </div>
+    </div>
 </form>
 </div>
